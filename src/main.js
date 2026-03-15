@@ -28,6 +28,14 @@ for ( let i = 0; i < buttons.length; i++ ) {
             return;
         }
 
+        if ( button.id === '=' ) {
+            if ( operation_screen.innerHTML !== ''  ) {
+                result_screen.innerHTML = eval( operation_screen.innerHTML );
+            }
+
+            return;
+        }
+
         if ( button.id === 'l-bracket' ) {
             operation_screen.innerHTML += '(';
         } else if ( button.id === 'r-bracket' ) {
