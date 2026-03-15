@@ -1,17 +1,20 @@
 const buttons = document.querySelectorAll( '.btn' );
 
+const operation_screen = document.getElementById( 'operation' );
+const result_screen = document.getElementById( 'result' );
+
 for ( let i = 0; i < buttons.length; i++ ) {
     const button = buttons[ i ];
 
     button.addEventListener( 'click', () => {
         if ( button.id === 'l-bracket' ) {
-            console.log( '(' );
+            operation_screen.innerHTML += '(';
         } else if ( button.id === 'r-bracket' ) {
-            console.log( ')' );
+            operation_screen.innerHTML += ')';
         } else if ( button.id === 'dot' ) {
-            console.log( '.' );
+            operation_screen.innerHTML += '.';
         } else {
-            console.log( button.id );
+            operation_screen.innerHTML += button.id;
         }
     } );
 }
