@@ -14,6 +14,15 @@ function replace_last_symbol( string, new_symbol ) {
     return string;
 }
 
+function calculate( string ) {
+    string
+        .replaceAll( /(\d)(\()/g, '$1*(' )
+        .replaceAll( /(\))(\d)/g, ')*$2' )
+        .replaceAll( /(\))(\()/g, ')*(' );
+
+    return eval( string );
+}
+
 for ( let i = 0; i < buttons.length; i++ ) {
     const button = buttons[ i ];
 
@@ -30,7 +39,7 @@ for ( let i = 0; i < buttons.length; i++ ) {
 
         if ( button.id === '=' ) {
             if ( operation_screen.innerHTML !== ''  ) {
-                result_screen.innerHTML = eval( operation_screen.innerHTML );
+                result_screen.innerHTML = calculate( operation_screen.innerHTML );
             }
 
             return;
