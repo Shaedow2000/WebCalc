@@ -14,7 +14,11 @@ for ( let i = 0; i < buttons.length; i++ ) {
         } else if ( button.id === 'dot' ) {
             operation_screen.innerHTML += '.';
         } else {
-            operation_screen.innerHTML += button.id;
+            if ( button.id === 'AC' ) {
+                operation_screen.innerHTML = '';
+            } else {
+                operation_screen.innerHTML += button.id;
+            }
         }
     } );
 }
