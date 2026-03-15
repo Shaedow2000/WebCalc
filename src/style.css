@@ -24,3 +24,7 @@
 #top-buttons {
     @apply flex gap-10 mt-10 
 }
+
+#numbers section {
+    @apply flex
+}
