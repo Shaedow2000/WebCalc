@@ -18,7 +18,8 @@ function calculate( string ) {
     string = string
         .replaceAll( /(\d)(\()/g, '$1*(' )
         .replaceAll( /(\))(\d)/g, ')*$2' )
-        .replaceAll( /(\))(\()/g, ')*(' );
+        .replaceAll( /(\))(\()/g, ')*(' )
+        .replaceAll( 'x', '*' );
 
     return eval( string );
 }
