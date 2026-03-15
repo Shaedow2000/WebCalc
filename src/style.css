@@ -48,3 +48,16 @@ main, #buttons {
 #numbers section {
     @apply flex gap-6
 }
+
+#mode-btn {
+    @apply transition-all rounded-full bg-gray-300/50 fill-black p-2
+}
+#mode-btn:hover {
+    @apply shadow-lg -translate-y-0.5
+}
+#mode-btn:active {
+    @apply shadow-sm translate-y-1
+}
+#sun {
+    display: none;
+}
