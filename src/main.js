@@ -15,7 +15,7 @@ function replace_last_symbol( string, new_symbol ) {
 }
 
 function calculate( string ) {
-    string
+    string = string
         .replaceAll( /(\d)(\()/g, '$1*(' )
         .replaceAll( /(\))(\d)/g, ')*$2' )
         .replaceAll( /(\))(\()/g, ')*(' );
