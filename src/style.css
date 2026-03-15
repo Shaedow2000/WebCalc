@@ -50,7 +50,7 @@ main, #buttons {
 }
 
 #mode-btn {
-    @apply transition-all rounded-full bg-gray-300/50 fill-black p-2
+    @apply transition-all rounded-full bg-gray-300/50 fill-black p-2 cursor-pointer
 }
 #mode-btn:hover {
     @apply shadow-lg -translate-y-0.5

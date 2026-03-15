@@ -88,7 +88,23 @@ function switch_icons() {
     moon_icon.classList.toggle( 'hide' );
 }
 
+function set_mode_from_localStorage() {
+    if ( localStorage.mode === 'light' ) {
+        sun_icon.classList.add( 'hide' );
+        moon_icon.classList.remove( 'hide' );
+
+        document.documentElement.classList.remove( 'dark' );
+    } else {
+        sun_icon.classList.remove( 'hide' );
+        moon_icon.classList.add( 'hide' );
+
+        document.documentElement.classList.add( 'dark' );
+    }
+}
+
 mode_btn.addEventListener( 'click', () => {
     switch_icons();
     switch_modes();
 } );
+
+set_mode_from_localStorage();
