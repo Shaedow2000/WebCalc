@@ -58,6 +58,7 @@ main, #buttons {
 #mode-btn:active {
     @apply shadow-sm translate-y-1
 }
-#sun {
+
+.hide {
     display: none;
 }

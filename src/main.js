@@ -1,3 +1,7 @@
+if ( localStorage.mode === undefined ) {
+    localStorage.setItem( 'mode', 'light' );
+}
+
 const buttons = document.querySelectorAll( '.btn' );
 
 const operation_screen = document.getElementById( 'operation' );
@@ -63,3 +67,27 @@ for ( let i = 0; i < buttons.length; i++ ) {
         }
     } );
 }
+
+const mode_btn = document.getElementById( 'mode-btn' );
+
+const sun_icon = document.getElementById( 'sun' );
+const moon_icon = document.getElementById( 'moon' );
+
+function switch_modes() {
+    if ( localStorage.mode === 'light' ) {
+        localStorage.mode = 'dark';
+    } else {
+        localStorage.mode = 'light';
+    }
+}
+
+function switch_icons() {
+    sun_icon.classList.toggle( 'hide' );
+    moon_icon.classList.toggle( 'hide' );
+    console.log('hi')
+}
+
+mode_btn.addEventListener( 'click', () => {
+    switch_icons();
+    switch_modes();
+} );
