@@ -3,6 +3,17 @@ const buttons = document.querySelectorAll( '.btn' );
 const operation_screen = document.getElementById( 'operation' );
 const result_screen = document.getElementById( 'result' );
 
+function replace_last_symbol( string, new_symbol ) {
+    const last_char = string[ string.length - 1 ];
+    if ( last_char === '+' || last_char === '-' || last_char === 'x' || last_char === '/' ) {
+        string[ string.length - 1 ] = new_symbol;
+        return string;
+    } else {
+        string += new_symbol;
+        return string;
+    }
+}
+
 for ( let i = 0; i < buttons.length; i++ ) {
     const button = buttons[ i ];
 
