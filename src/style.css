@@ -28,9 +28,17 @@ main, #buttons {
 #top-buttons {
     @apply flex gap-10 md:mt-10 
 }
-#top-buttons div,
-#symbols div {
+#top-buttons div {
     @apply bg-blue-300 dark:bg-blue-500
+}
+
+#symbols div,
+#numbers .plus-btn,
+#numbers #dot {
+    @apply bg-blue-200 dark:bg-blue-400
+}
+#symbols .eq-btn {
+    @apply bg-blue-400 dark:bg-blue-600
 }
 
 #numbers, 
