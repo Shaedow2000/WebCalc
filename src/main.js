@@ -76,15 +76,16 @@ const moon_icon = document.getElementById( 'moon' );
 function switch_modes() {
     if ( localStorage.mode === 'light' ) {
         localStorage.mode = 'dark';
+        document.documentElement.classList.add( 'dark' );
     } else {
         localStorage.mode = 'light';
+        document.documentElement.classList.remove( 'dark' );
     }
 }
 
 function switch_icons() {
     sun_icon.classList.toggle( 'hide' );
     moon_icon.classList.toggle( 'hide' );
-    console.log('hi')
 }
 
 mode_btn.addEventListener( 'click', () => {
