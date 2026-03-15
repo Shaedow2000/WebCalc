@@ -17,3 +17,6 @@
 #buttons div:hover {
     @apply shadow-lg -translate-y-0.5
 }
+#buttons div:active {
+    @apply shadow-sm translate-y-1
+}
