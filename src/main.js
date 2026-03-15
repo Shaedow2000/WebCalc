@@ -5,13 +5,13 @@ const result_screen = document.getElementById( 'result' );
 
 function replace_last_symbol( string, new_symbol ) {
     const last_char = string[ string.length - 1 ];
-    if ( last_char === '+' || last_char === '-' || last_char === 'x' || last_char === '/' ) {
-        string[ string.length - 1 ] = new_symbol;
-        return string;
-    } else {
-        string += new_symbol;
-        return string;
+
+    if ( ( last_char === '+' || last_char === '-' || last_char === 'x' || last_char === '/' ) && ( new_symbol === '+' || new_symbol === '-' || new_symbol === 'x' || new_symbol === '/' ) ) {
+        string = string.slice( 0, -1 );
     }
+
+    string += new_symbol;
+    return string;
 }
 
 for ( let i = 0; i < buttons.length; i++ ) {
@@ -35,7 +35,7 @@ for ( let i = 0; i < buttons.length; i++ ) {
         } else if ( button.id === 'dot' ) {
             operation_screen.innerHTML += '.';
         } else {
-            operation_screen.innerHTML += button.id; 
+            operation_screen.innerHTML = replace_last_symbol( operation_screen.innerHTML, button.id ); 
         }
     } );
 }
