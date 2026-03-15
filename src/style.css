@@ -25,6 +25,9 @@
     @apply flex gap-10 mt-10 
 }
 
+#numbers {
+    @apply flex flex-col gap-6 mt-6
+}
 #numbers section {
-    @apply flex
+    @apply flex gap-6
 }
