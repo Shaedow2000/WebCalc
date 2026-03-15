@@ -29,11 +29,13 @@ for ( let i = 0; i < buttons.length; i++ ) {
     button.addEventListener( 'click', () => {
         if ( button.id === 'AC' ) {
             operation_screen.innerHTML = '';
+            result_screen.innerHTML = '';
             return;
         }
 
         if ( button.id === 'DEL' ) {
             operation_screen.innerHTML = operation_screen.innerHTML.slice( 0, -1 );
+            result_screen.innerHTML = '';
             return;
         }
 
