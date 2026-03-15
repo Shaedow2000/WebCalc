@@ -24,6 +24,9 @@
 #top-buttons {
     @apply flex gap-10 mt-10 
 }
+#top-buttons div {
+    @apply bg-blue-300
+}
 
 #numbers {
     @apply flex flex-col gap-6 mt-6
