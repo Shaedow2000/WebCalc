@@ -42,7 +42,11 @@ for ( let i = 0; i < buttons.length; i++ ) {
 
         if ( button.id === '=' ) {
             if ( operation_screen.innerHTML !== ''  ) {
-                result_screen.innerHTML = calculate( operation_screen.innerHTML );
+                try {
+                    result_screen.innerHTML = calculate( operation_screen.innerHTML );
+                } catch ( err ) {
+                    result_screen.innerHTML = err.name; 
+                }
             }
 
             return;
