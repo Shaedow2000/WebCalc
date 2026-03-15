@@ -12,5 +12,8 @@
 }
 
 #buttons div {
-    @apply flex justify-center items-center border-2 border-black rounded-xl w-20 h-20 shadow-md shadow-black m-3 p-4 bg-white text-3xl font-semibold
+    @apply flex justify-center items-center border-2 border-black rounded-xl w-20 h-20 shadow-md shadow-black m-3 p-4 bg-white text-3xl font-semibold transition-all cursor-pointer
+}
+#buttons div:hover {
+    @apply shadow-lg -translate-y-0.5
 }
