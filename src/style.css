@@ -28,11 +28,13 @@ main, #buttons {
 #top-buttons {
     @apply flex gap-10 md:mt-10 
 }
-#top-buttons div {
+#top-buttons div,
+#symbols div {
     @apply bg-blue-300 dark:bg-blue-500
 }
 
-#numbers {
+#numbers, 
+#symbols {
     @apply flex flex-col gap-6 mt-6
 }
 #numbers section {
