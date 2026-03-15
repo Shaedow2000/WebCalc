@@ -12,6 +12,11 @@ for ( let i = 0; i < buttons.length; i++ ) {
             return;
         }
 
+        if ( button.id === 'DEL' ) {
+            operation_screen.innerHTML = operation_screen.innerHTML.slice( 0, -1 );
+            return;
+        }
+
         if ( button.id === 'l-bracket' ) {
             operation_screen.innerHTML += '(';
         } else if ( button.id === 'r-bracket' ) {
