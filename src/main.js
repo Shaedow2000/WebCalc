@@ -36,6 +36,8 @@ for ( let i = 0; i < buttons.length; i++ ) {
     const button = buttons[ i ];
 
     button.addEventListener( 'click', () => {
+        result_screen.innerHTML = '';
+
         if ( button.id === 'AC' ) {
             operation_screen.innerHTML = '';
             result_screen.innerHTML = '';
