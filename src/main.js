@@ -7,6 +7,10 @@ const buttons = document.querySelectorAll( '.btn' );
 const operation_screen = document.getElementById( 'operation' );
 const result_screen = document.getElementById( 'result' );
 
+function scroll_to_last_char() {
+    operation_screen.scrollLeft = operation_screen.scrollWidth;
+}
+
 function replace_last_symbol( string, new_symbol ) {
     const last_char = string[ string.length - 1 ];
 
@@ -65,6 +69,8 @@ for ( let i = 0; i < buttons.length; i++ ) {
         } else {
             operation_screen.innerHTML = replace_last_symbol( operation_screen.innerHTML, button.id ); 
         }
+
+        scroll_to_last_char();
     } );
 }
 
