@@ -3,6 +3,13 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   base: '/WebCalc/',
+  root: '.',
+  build: {
+        outDir: 'dist',
+        rollupOptions: {
+            input: './index.html'
+        }
+  },
   plugins: [
     tailwindcss(),
   ],
