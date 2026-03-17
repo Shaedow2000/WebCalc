@@ -1,5 +1,6 @@
 {
   "name": "webcalc",
+  "homepage": "https://shaedow2000.github.io/WebCalc/",
   "version": "0.0.0",
   "private": true,
   "type": "module",
